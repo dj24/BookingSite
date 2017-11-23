@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+	<head>
+		<title>{{title}}</title>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+		$( document ).ready(function() {
+			$('table').hide();
+			$( "#tblSelect" ).click(function() {
+				$('option:nth-of-type(1)').hide();
+			});
+			$( "#tblSelect" ).change(function() {
+				$('table').hide();
+				
+				$('select').css('color','black');
+				$('#' + $(this).val()).fadeIn();
+			});
+		});
+		</script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	</head>
+	<body>
+		<div id="header">
+			<div>
+				<h1>EZ Airlines</h1>
+			</div>
+		</div>
+		<div id="main">
+			<p class="message">{{message}}</p>
+			<p class="error">{{error}}</p>
+			<h2>Add Customer</h2>
+			<form name="addCustForm" action = "addCust" method = "post">
+				<input placeholder="First Name" name="first"></input><br>
+				<input placeholder="Surname" name="last"></input><br>
+				<input placeholder="Address" name="address"></input><br>
+				<input placeholder="Email" name="email"></input><br>
+				<input type = "submit" value = "Add Customer" />
+			</form>
+			
+			<h2>Delete Customer</h2>
+			<form name="addCustForm" action = "deleteCust" method = "post">
+				<input placeholder="Customer ID" name="custID"></input><br>
+				
+				<input type = "submit" value = "Delete Customer" />
+			</form>
+			
+			<h2>Delete Customer</h2>
+			<form name="q5" action = "query5" method = "post">
+				
+				<input type = "submit" value = "q5" />
+			</form>
+			<!--
+			<h2>Select Table</h2>
+			<select placeholder="select" id="tblSelect">
+				<option>View Tables</option>
+				<option value="flight">Flights</option>
+				<option value="cust">Customers</option>
+				<option value="booking">Booking</option>
+			</select>
+			
+			
+			
+			<table id="flight">
+			  <tr>
+				<th>Flight ID</th>
+				<th>Date</th>
+				<th>Origin</th>
+				<th>Destination</th>
+				<th>Capacity</th>
+				<th>Price</th>
+			  </tr>
+			  {% for row in flight %}
+					<tr>
+						{% for item in row%}
+							<td>
+								{{item}}
+							</td>
+						{% endfor %}
+						
+					</tr>
+				{% endfor %}
+			</table>
+			
+			
+			<table id="cust">
+				<tr>
+					<th>Customer ID</th>
+					<th>First Name</th>
+					<th>Surname</th>
+					<th>Address</th>
+					<th>Email</th>
+				</tr>
+				{% for row in cust %}
+					<tr>
+						{% for item in row%}
+							<td>
+								{{item}}
+							</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+
+			</table>
+			
+			
+			<table id="booking">
+			  <tr>
+				<th>Booking ID</th>
+				<th>Customer ID</th>
+				<th>Flight ID</th>
+				<th>Status</th>
+				<th>Time Booked</th>
+				<th>Cost</th>
+				<th></th>
+			  </tr>
+			  {% for row in booking %}
+					<tr>
+						{% for item in row%}
+							<td>
+								{{item}}
+							</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+			</table>
+			-->
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	</head>
+	<body>
+		<div id="header">
+			<div>
+				<h1>Easy Airlines</h1>
+			</div>
+		</div>
+		<div id="main">
+			<h2>Select Table</h2>
+			<select>
+				<option>Flights</option>
+				<option>Customers</option>
+				<option>Booking</option>
+			</select>
+			
+			
+			<!-- Flights-->
+			<table>
+			  <tr>
+				<th>Flight ID</th>
+				<th>Date</th>
+				<th>Origin</th>
+				<th>Destination</th>
+				<th>Capacity</th>
+				<th>Price</th>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			</table>
+			
+			<!--Customers-->
+			<table>
+			  <tr>
+				<th>Customer ID</th>
+				<th>First Name</th>
+				<th>Surname</th>
+				<th>Address</th>
+				<th>Email</th>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			</table>
+			
+			<!--Bookings-->
+			<table>
+			  <tr>
+				<th>Booking ID</th>
+				<th>Customer ID</th>
+				<th>Flight ID</th>
+				<th>Status</th>
+				<th>Time Booked</th>
+				<th>Cost</th>
+				<th></th>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			</table>
+			
+			
+		</div>
+	</body>
+</html>

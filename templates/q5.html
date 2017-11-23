@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+	<head>
+		<title>{{title}}</title>
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	</head>
+	<body>
+		<div id="header">
+			<div>
+				<h1>EZ Airlines</h1>
+			</div>
+		</div>
+		<div id="main">
+			
+			
+			
+			
+			
+			<table id="flight">
+			  <tr>
+				<th>Customer ID</th>
+				<th>Name</th>
+				<th>Number of Flights</th>
+				<th>Total Spend</th>
+			  </tr>
+			  {% for row in rows %}
+					<tr>
+						{% for item in row%}
+							<td>
+								{{item}}
+							</td>
+						{% endfor %}
+						
+					</tr>
+				{% endfor %}
+			</table>
+			
+			
+			
+		</div>
+	</body>
+</html>

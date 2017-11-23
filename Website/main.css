@@ -1,0 +1,39 @@
+body{
+	margin:0;
+	font-family: "proxima-nova",Arial,"Lucida Grande",sans-serif;
+}
+#header{
+	height:80px;
+	width:100%;
+	background:orange;
+	color:white;
+}
+#header div{
+	padding: 15px 0 15px 0;
+	margin:auto;
+	width:100%;
+	max-width:960px;
+
+}
+h1{
+	margin:0;
+	font-size:40px;
+	vertical-align:middle;
+	display:inline;
+}
+#main{
+	height:100%;
+	margin:auto;
+	width:100%;
+	max-width:960px;
+	padding:30px;
+}
+h2{
+	margin:0;
+}
+td{
+	border:1px orange solid;
+}
+select{
+	margin:20px 0 20px;
+}
